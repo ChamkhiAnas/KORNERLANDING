@@ -1,6 +1,7 @@
 <template>
     <div class="landing">
-            <Navbar/>
+            <Navbar class="pt-4" />
+            <Header class="mt-10"/>
     </div>
 </template>
 
