@@ -87,12 +87,33 @@
 
 
 
- a{
-    font-family:$Inter_B;
-    color:$text-color-primary;
-    }
-    
+li {
+  position:relative;
+  a{
+     font-family:$Inter_B;
+     color:$text-color-primary;
+  
+     }
+}
 
+    
+  a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    transform: scaleX(0);
+    transition: transform 300ms ease;
+    transform-origin: right;
+    background:#A9D9C1;
+  }    
+    a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);  
+    }
 
 </style>
 

@@ -10,6 +10,7 @@
 
 .landing{
     background-color: $text-color-secondary;
+    height: 100%;
 }
 
 
