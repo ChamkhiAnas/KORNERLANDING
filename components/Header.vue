@@ -18,6 +18,15 @@
             </button>
 
 
+            <div class="rounded-lg">
+                <video id="video" loop playsinline autoplay muted class="bg-image mt-16 custom-video" allowfullscreen>
+                    <source src="public/korner_video.mp4" type="video/mp4">  
+                </video>
+                                
+            </div>
+
+
+
 
         </div>
 
@@ -27,6 +36,16 @@
 
 <style lang="scss" scoped>
 @use "~/assets/styling.scss";
+
+
+.custom-video {
+        height: 42rem; /* Adjust the height as needed */
+        border-radius: 15px; /* Add border-radius */
+        overflow: hidden; /* Ensures the border-radius is applied correctly */
+        width: 100%; /* Make sure the video fits the container */
+        object-fit: cover; /* Ensures the video covers the area without distortion */
+}
+
 
 h1{
     font-family: $Inter_B;
