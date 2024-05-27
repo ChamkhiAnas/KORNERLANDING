@@ -11,14 +11,55 @@
         <h5 class="mt-6">Services</h5>
         <h4 class="mt-3 text-center"><span>B</span>oostez votre café, bar ou restaurant</h4>
         <h6 class="mt-3 text-center">Attirez plus de clients, fidélisez les existants et facilitez la gestion de votre établissement avec notre solution  <br>  web tout-en-un.</h6>
-
-
-
     </div>
 
     <img src="public/Leaf_right.webp" class="absolute w-16 right-0 top-14" alt="Leaf right icon" />
-
     <img src="public/Leaf_left.webp" class="absolute w-8 left-0 top-16" alt="Leaf left icon" />
+
+
+    <div class="services-card  max-w-screen-2xl flex flex-col  mx-auto px-4 py-4 ">
+        <div class="card-wrapper flex flex-row  mt-3 gap-6 w-full">
+            <div class="text-card min-h-96 px-8 py-24 w-10/12 ">
+                <h1>Conception et Développement de Sites Web</h1>
+                <p class="mt-4">Nous créons des sites web sur mesure, optimisés pour les mobiles, qui reflètent l'essence de votre établissement et offrent une expérience utilisateur exceptionnelle. Intégration facile pour la commande en ligne et les réservations.</p>
+            </div>
+
+            <div class="service-card min-h-96 flex justify-center  px-8 py-24 bg-cardColor1 w-10/12">
+                <img src="public/cardIconTwo.webp" class="scale-75 " alt="Card absract icon" />
+
+            </div>
+        </div>
+
+
+        <div class="card-wrapper flex flex-row  mt-3 gap-6 w-full">
+
+            <div class="service-card min-h-96 flex justify-center  px-8 py-24 bg-cardColor2 w-10/12">
+                <img src="public/cardIconOne.webp" class="scale-75 " alt="Card absract icon" />
+
+            </div>
+
+            <div class="text-card min-h-96 px-8 py-24 w-10/12 ">
+                <h1>Redesign de Menu</h1>
+                <p class="mt-4">Donnez un nouvel élan à votre image avec notre service de redesign de menu. Nous vous aidons à créer des menus attrayants et modernes qui captivent vos clients et mettent en valeur vos plats et boissons.</p>
+            </div>
+        </div>
+
+        <div class="card-wrapper flex flex-row  mt-3 gap-6 w-full">
+            <div class="text-card min-h-96 px-8 py-24 w-10/12 ">
+                <h1>Conception et Optimisation de Menus</h1>
+                <p class="mt-4">Attirez et engagez vos clients avec des menus attrayants et optimisés pour les plateformes en ligne. Gestion simplifiée grâce à notre système de gestion de contenu (CMS).</p>
+            </div>
+
+            <div class="service-card min-h-96 flex justify-center  px-8 py-24 bg-cardColor1 w-10/12">
+                <img src="public/cardIconThree.webp" class="scale-75 " alt="Card absract icon" />
+
+            </div>
+        </div>
+
+
+        
+
+    </div>
 
 
 
@@ -44,11 +85,11 @@
 .heading-of-section{
     color:$primary;
     h5{
-        font-size: $section_name_size;
+        font-size:  calc($section_name_size + 0.390625vw);
         font-family: $Inter_B;
     }
     h4{
-        font-size: $section_slogan_size;
+        font-size: calc($section_slogan_size + 0.390625vw);
         font-family: $Inter_B;
 
         span{
@@ -57,10 +98,31 @@
     }
     h6{
         font-family: $Inter_R;
+        font-size:  calc($section_description_size + 0.390625vw);
+
     }
 
 }
 
+
+.services-card{
+    .text-card{
+        background-color: $primary;
+        color:$secondary;
+        h1{
+            font-family: $Inter_M;
+            font-size:calc($card-heading + 0.2vw);
+        }
+        p{
+            font-family: $Inter_L;
+            color:white;
+            font-size:calc($section_name_size + 0.1vw);
+
+
+        }
+    }
+
+}
 
 </style>
 
