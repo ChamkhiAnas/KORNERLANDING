@@ -50,7 +50,7 @@ useGsap.to(".video-korner", {
     trigger:".video-korner",
     start:"top start",
     end:"bottom center",
-    markers:true,
+    markers:false,
 
     toggleActions:"play pause reverse reverse"
 
