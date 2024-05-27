@@ -35,11 +35,14 @@ useGsap.to(".c", {
   duration :3,
   scrollTrigger:{
     trigger:".c",
-    start:"top center",
+    start:"start start",
     markers:true,
     //when to start the animation depends on scroll top and center of scroll
     // first element about object second about scroll element
+    // we can use top or center or bottom , or pixels or pourcentages (always relative to the top)
     toggleActions:"restart pause reverse pause"
+
+    // you can customize end triger with key endTrigger
 
     //key of toggle actions can be play,pause,resume,revert,restart,reset,complete,none
     // onEnter: What action to perform when the scroll enters the trigger area.

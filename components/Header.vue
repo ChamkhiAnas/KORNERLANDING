@@ -27,80 +27,6 @@
 
 
 
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-            <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div> <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div> <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div> <div id="myPinWrapper">
-                <div class="content">
-                    <h1 class="title">teeeeeeeeest gsap animation</h1>
-                </div>
-            </div>
-
 
 
         </div>
@@ -122,7 +48,8 @@ useGsap.to(".video-korner", {
   ease: "back.out(1.7)",
   scrollTrigger:{
     trigger:".video-korner",
-    start:"top center",
+    start:"top start",
+    end:"bottom center",
     markers:true,
 
     toggleActions:"play pause reverse reverse"
@@ -130,6 +57,9 @@ useGsap.to(".video-korner", {
   }
     
 });
+
+
+
 
 });
 

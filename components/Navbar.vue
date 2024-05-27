@@ -32,9 +32,9 @@
 
       
 
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <div class="hidden  w-full md:block md:w-auto" id="navbar-default">
             <ul
-              class="font-medium bg-kornerBackground flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
+              class="font-medium navbar-items bg-kornerBackground flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
             >
               <li>
                 <a href="#" class="block py-2 px-3 text-white hover:text-textHoverColor rounded md:bg-transparent md:p-0" aria-current="page">À propos de nous</a>
@@ -57,7 +57,7 @@
           
         </div>
         <div v-if="isMenuOpen">
-            <div class="block w-full md:hidden md:w-auto" id="navbar-default">
+            <div class="block  w-full md:hidden md:w-auto" id="navbar-default">
                 <ul
               class="font-medium bg-kornerBackground flex flex-col p-4 md:p-0 mt-4  border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
             >
@@ -82,9 +82,62 @@
     </div>
   </template>
 
+
+<script setup>
+
+onMounted(() => {
+
+  const items = document.querySelectorAll('.navbar-items')[0].childNodes;
+//   useGsap.to("#navbar-default", {
+//   rotation: 0,
+//   duration :0.6,
+//   y:20,
+//   ease: "back.out(1.7)",
+
+    
+// });
+
+
+console.log("items",items)
+
+items.forEach((item, index) => {
+  useGsap.to(item, {
+                duration: 0.4,
+                opacity:1,
+                y: 0, 
+                delay: index*0.3 
+            });
+        });
+
+
+   
+        
+
+
+});
+
+
+
+const isMenuOpen=ref(false)
+
+const toggleMenu=()=>{
+    isMenuOpen.value=!isMenuOpen.value
+}
+
+
+</script>
+
 <style lang="scss" scoped>
 @use "~/assets/styling.scss";
 
+
+.navbar-items{
+  li {
+    transform: translateY(-20px);
+    opacity: 0;
+
+  }
+}
 
 
 li {
@@ -118,14 +171,3 @@ li {
 </style>
 
 
-<script setup>
-
-
-const isMenuOpen=ref(false)
-
-const toggleMenu=()=>{
-    isMenuOpen.value=!isMenuOpen.value
-}
-
-
-</script>
