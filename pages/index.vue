@@ -1,8 +1,8 @@
 <template>
     <div class="landing">
             <Navbar class="pt-4" />
-            <Header class="mt-10 z-50" />
-            <Services />
+            <Header class="mt-10 mb-10  relative z-20" />
+            <Services class="mt-24" />
     </div>
 </template>
 

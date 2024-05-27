@@ -5,13 +5,32 @@
         <div class="box b">b</div>
         <div class="box c">c</div>
         <div class="box D">D</div>
-        <div class="box D">D</div>
-        <div class="box D">D</div>
-        <div class="box D">D</div>
-        <div class="box D">D</div>
 
 
 
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
+        <h1>juste a random test </h1>
 
 
     </div>
@@ -28,30 +47,28 @@
 onMounted(() => {
 
 
-useGsap.to(".c", {
-  rotation: 0,
-  x: 400,
-  rotation: 360,
-  duration :3,
-  scrollTrigger:{
-    trigger:".c",
-    start:"start start",
-    markers:true,
-    //when to start the animation depends on scroll top and center of scroll
-    // first element about object second about scroll element
-    // we can use top or center or bottom , or pixels or pourcentages (always relative to the top)
-    toggleActions:"restart pause reverse pause"
+    let box=document.querySelectorAll(".box")
 
-    // you can customize end triger with key endTrigger
+    console.log("box",box)
 
-    //key of toggle actions can be play,pause,resume,revert,restart,reset,complete,none
-    // onEnter: What action to perform when the scroll enters the trigger area.
-    // onLeave: What action to perform when the scroll leaves the trigger area.
-    // onEnterBack: What action to perform when the scroll re-enters the trigger area from the opposite direction.
-    // onLeaveBack: What action to perform when the scroll leaves the trigger area from the opposite direction.
-  }
-    
-});
+
+    box.forEach(element => {
+        useGsap.to(element, {
+
+        scrollTrigger:{
+            trigger:element,
+            start:"top top",
+            markers:true,
+            end:"+=300px",
+            pin:true,
+            pinSpacing:false,
+            toggleActions:"play pause reverse reverse"
+
+        }
+            
+        });
+    });
+
 
 });
 
@@ -69,11 +86,12 @@ useGsap.to(".c", {
 
 
 .box{
-    width:6rem;
-    height: 6rem;
+    width:30rem;
+    height: 30rem;
     background-color: red;
     padding: 4rem;
-    margin: 30rem;
+    font-size: 10rem;
+    text-align: center;
 }
 
 .a{

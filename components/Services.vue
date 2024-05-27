@@ -1,7 +1,7 @@
 <template>
 
 
-<div class="services relative">
+<div class="services relative mt-24 pt-24">
 
 
 
@@ -61,6 +61,55 @@
 
     </div>
 
+    
+    <div class="relative mt-80">
+
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        
+    </div>
+        
 
 
 
@@ -72,6 +121,36 @@
 
 
 <script setup>
+
+
+onMounted(() => {
+
+
+let box=document.querySelectorAll(".card-wrapper")
+
+console.log("box",box)
+
+
+box.forEach(element => {
+    useGsap.to(element, {
+
+    scrollTrigger:{
+        trigger:element,
+        start:"start top",
+        markers:true,
+        end:"+=300px",
+        pin:true,
+        pinSpacing:false,
+        toggleActions:"play pause reverse reverse"
+
+    }
+        
+    });
+});
+
+
+});
+
 
 </script>
 

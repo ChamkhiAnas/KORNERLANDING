@@ -1,7 +1,7 @@
 <template>
         <div class="header max-w-screen-2xl flex flex-col flex-wrap items-center justify-center mx-auto px-4 py-8   ">
 
-            <h1>Boostez votre <span>Café, Bar ou Restaurant</span>  </h1>
+            <h1 class="text-center">Boostez votre <span>Café, Bar ou Restaurant</span>  </h1>
             <h6 class="mt-6 w-3/5 text-center">Attirez de nouveaux clients, fidélisez les anciens et augmentez vos ventes avec un site Web performant et conçu pour votre activité.</h6>
 
 
@@ -44,12 +44,14 @@ onMounted(() => {
 useGsap.to(".video-korner", {
   rotation: 0,
   duration :0.6,
-  scale:1.5,
+  scale:1.3,
   ease: "back.out(1.7)",
   scrollTrigger:{
     trigger:".video-korner",
     start:"top start",
     end:"bottom center",
+    pin:false,
+    // pinSpacing:true,
     markers:false,
 
     toggleActions:"play pause reverse reverse"
@@ -108,9 +110,9 @@ h6{
     transition: all 0.6s ease-in, color 0.3s 0.3s;
 }
 
-.button-2:hover {
-    box-shadow: 30rem 0 0 0 #A9D9C1 inset;
-}
+// .button-2:hover {
+//     box-shadow: 30rem 0 0 0 #A9D9C1 inset;
+// }
 
 .svg-container {
     position: relative;
