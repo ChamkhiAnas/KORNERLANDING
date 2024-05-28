@@ -98,7 +98,6 @@ onMounted(() => {
 // });
 
 
-console.log("items",items)
 
 items.forEach((item, index) => {
   useGsap.to(item, {
@@ -108,11 +107,6 @@ items.forEach((item, index) => {
                 delay: index*0.3 
             });
         });
-
-
-   
-        
-
 
 });
 

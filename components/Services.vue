@@ -9,7 +9,7 @@
     <div class="heading-of-section max-w-screen-2xl  relative flex flex-col flex-wrap items-center justify-center mx-auto px-4 py-14 mt-10">
         <img src="public/services_icon.webp" class=" w-16 m-0 m-auto " alt="Flowbite Logo" />
         <h5 class="mt-6">Services</h5>
-        <h4 class="mt-3 text-center"><span>B</span>oostez votre café, bar ou restaurant</h4>
+        <h4 class="mt-3 text-center "><span>B</span>oostez votre café, bar ou restaurant</h4>
         <h6 class="mt-3 text-center">Attirez plus de clients, fidélisez les existants et facilitez la gestion de votre établissement avec notre solution  <br>  web tout-en-un.</h6>
     </div>
 
@@ -124,6 +124,9 @@
 
 
 onMounted(() => {
+
+
+   
 
 
 let box=document.querySelectorAll(".card-wrapper")

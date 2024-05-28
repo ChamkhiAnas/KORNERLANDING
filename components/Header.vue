@@ -1,11 +1,11 @@
 <template>
         <div class="header max-w-screen-2xl flex flex-col flex-wrap items-center justify-center mx-auto px-4 py-8   ">
 
-            <h1 class="text-center">Boostez votre <span>Café, Bar ou Restaurant</span>  </h1>
-            <h6 class="mt-6 w-3/5 text-center">Attirez de nouveaux clients, fidélisez les anciens et augmentez vos ventes avec un site Web performant et conçu pour votre activité.</h6>
+            <h1  class="text-center sloganText flex flex-row gap-4">Boostez votre <span>Café, Bar ou Restaurant</span>  </h1>
+            <h6 class="mt-6 w-3/5 SubSloganText text-center">Attirez de nouveaux clients, fidélisez les anciens et augmentez vos ventes avec un site Web performant et conçu pour votre activité.</h6>
 
 
-            <button class="button--narvi button-2 flex w-fit gap-2 justify-center items-center mt-10 px-10 py-4 rounded-xl">
+            <button class="button--narvi button button-2 flex w-fit gap-2 justify-center items-center mt-10 px-10 py-4 rounded-xl">
                 <span><span class="mr-4">Réserver un appel maintenant</span></span>
                 <div class="svg-container">
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -18,7 +18,7 @@
             </button>
 
 
-            <div class="rounded-lg video-korner">
+            <div class=".video rounded-lg video-korner">
                 <video id="video" loop playsinline autoplay muted class="bg-image mt-16 custom-video" allowfullscreen>
                     <source src="public/korner_video.mp4" type="video/mp4">  
                 </video>              
@@ -39,6 +39,117 @@
 <script setup>
 
 onMounted(() => {
+
+    let sloganText = document.querySelector(".sloganText")
+
+    let SubSloganText = document.querySelector(".SubSloganText")
+
+
+    let button = document.querySelector(".button")
+
+
+    setTimeout(() => {
+
+    useGsap.to(sloganText, {
+            
+
+                opacity: 1,
+                rotationZ: '0',
+                duration: 0.2,
+                delay: 0,
+                ease: "power4.easeInOut"
+
+            });
+
+        }, 100); // 1000 milliseconds = 1 second
+
+
+
+    useGsap.to(SubSloganText, {
+            
+
+                opacity: 1,
+                y: '-10px',
+                duration: 0.3,
+                delay: 1.8,
+                ease: "power4.easeInOut"
+
+            });
+
+
+
+    useGsap.to(button, {
+            
+
+            opacity: 1,
+            y: '-10px',
+            duration: 0.2,
+            delay: 1.8,
+            ease: "power4.easeInOut"
+
+        });
+
+
+
+
+
+
+    let splitWords =  function (selector) {
+        var h1Element = document.querySelector(selector);
+        var textContent = h1Element.textContent;
+        var words = textContent.split(' ');
+                var firstWord = `<span class="testbabe" style="font-family: Inter-Bold;font-size:4rem;"' >${words[0]}</span>`;
+                var secondword = `<span class="testbabe" style="font-family: Inter-Bold;font-size:4rem;">${words[1]}</span>`;
+
+                var remainingWords = words.slice(2)
+                var wrappedRemainingWords=[];
+                remainingWords.forEach((item,index)=>{
+                    wrappedRemainingWords[index] = `<div class="testbabe slogan-bigg" style="transform: translateY(20px);opacity: 0;font-family: MrDeHaviland" >${item}</div> `;
+                })
+                var remaintext=wrappedRemainingWords.join('   ');
+                var newContent = firstWord + '    ' + secondword + '    ' + remaintext;
+                h1Element.innerHTML = newContent;
+    };
+
+
+    splitWords(".sloganText")
+
+   
+
+
+
+    
+
+    let revealText = document.querySelectorAll(".testbabe")
+
+
+
+    setTimeout(() => {
+    revealText.forEach((item,index) => {
+
+        useGsap.to(item, {
+            
+                    y: '-10px',
+                    opacity: 1,
+                    rotationZ: '0',
+                    duration: 0.1,
+                    delay: index*0.3,
+                    ease: "power4.easeInOut"
+
+
+
+
+                });
+
+
+        });
+
+    }, 200); // 1000 milliseconds = 1 second
+    
+
+
+
+
 
 
 useGsap.to(".video-korner", {
@@ -70,6 +181,32 @@ useGsap.to(".video-korner", {
 <style lang="scss" scoped>
 @use "~/assets/styling.scss";
 
+.testbabe{
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.sloganText{
+    opacity: 0;
+}
+
+.SubSloganText{
+    opacity: 0;
+    transform: translateY(10px);
+
+}
+
+.slogan-small{
+        font-family: $MrDeHaviland;
+    }
+
+.slogan-bigg{
+    font-family: $Inter_B;
+    font-size:4rem;
+    color:$text-color-primary;
+  
+
+}
 
 .custom-video {
         height: 42rem; 
@@ -95,7 +232,9 @@ h6{
     font-size:1.2rem
 }
 
-
+.button{
+    opacity: 0;
+}
 
 .button--narvi {
     background-color: #FFEDE3;

@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     extraPlugins:{
       scrollTrigger:true,
       scrollTo: true
-    }
+    },
+ 
   },
   css:["~/assets/main.scss"],
   postcss: {
