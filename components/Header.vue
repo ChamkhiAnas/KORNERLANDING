@@ -5,17 +5,6 @@
             <h6 class="mt-6 w-3/5 SubSloganText text-center">Attirez de nouveaux clients, fidélisez les anciens et augmentez vos ventes avec un site Web performant et conçu pour votre activité.</h6>
 
 
-            <!-- <button class="button--narvi button button-2 flex w-fit gap-2 justify-center items-center mt-10 px-10 py-4 rounded-xl">
-                <span><span class="mr-4">Réserver un appel maintenant</span></span>
-                <div class="svg-container">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                        <path fill="#FFEDE3" d="M16 11V8h-3V6h3V3h2v3h3v2h-3v3zm3.95 10q-3.125 0-6.187-1.35T8.2 15.8t-3.85-5.55T3 4.05V3h5.9l.925 5.025l-2.85 2.875q.55.975 1.225 1.85t1.45 1.625q.725.725 1.588 1.388T13.1 17l2.9-2.9l5 1.025V21z"/>
-                    </svg>
-                    <svg class="icon2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                        <path fill="#FFEDE3" d="M16 11V8h-3V6h3V3h2v3h3v2h-3v3zm3.95 10q-3.125 0-6.187-1.35T8.2 15.8t-3.85-5.55T3 4.05V3h5.9l.925 5.025l-2.85 2.875q.55.975 1.225 1.85t1.45 1.625q.725.725 1.588 1.388T13.1 17l2.9-2.9l5 1.025V21z"/>
-                    </svg>
-                </div>
-            </button> -->
 
             <a class="bt more-bt button w-fit mt-10 py-4 px-14 " href="javascript:void(0)">
                 <span class="fl"></span><span class="sfl"></span><span class="cross"></span><i></i>

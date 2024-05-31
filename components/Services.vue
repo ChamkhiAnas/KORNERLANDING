@@ -6,7 +6,7 @@
 
 
 
-    <div class="heading-of-section max-w-screen-2xl  relative flex flex-col flex-wrap items-center justify-center mx-auto px-4 py-14 mt-10">
+    <div class="heading-of-section opacity-0 max-w-screen-2xl  relative flex flex-col flex-wrap items-center justify-center mx-auto px-4 py-14 mt-10">
         <img src="public/services_icon.webp" class=" w-16 m-0 m-auto " alt="Flowbite Logo" />
         <h5 class="mt-6">Services</h5>
         <h4 class="mt-3 text-center "><span>B</span>oostez votre café, bar ou restaurant</h4>
@@ -17,8 +17,8 @@
     <img src="public/Leaf_left.webp" class="absolute w-8 left-0 top-16" alt="Leaf left icon" />
 
 
-    <div class="services-card  max-w-screen-2xl flex flex-col  mx-auto px-4 py-4 ">
-        <div class="card-wrapper flex flex-col lg:flex-row  items-center  mt-6 gap-6 w-full">
+    <div class="services-card opacity-0  max-w-screen-2xl flex flex-col  mx-auto px-4 py-4 ">
+        <div class="card-wrapper  flex flex-col lg:flex-row  items-center  mt-6 gap-6 w-full">
             <div class="text-card min-h-96 px-8 py-24 w-full lg:w-9/12 ">
                 <h1>Conception et Développement de Sites Web</h1>
                 <p class="mt-4">Nous créons des sites web sur mesure, optimisés pour les mobiles, qui reflètent l'essence de votre établissement et offrent une expérience utilisateur exceptionnelle. Intégration facile pour la commande en ligne et les réservations.</p>
@@ -131,7 +131,44 @@ onMounted(() => {
 
 let box=document.querySelectorAll(".card-wrapper")
 
-console.log("box",box)
+let services=document.querySelectorAll(".heading-of-section")[0]
+
+let cards=document.querySelectorAll(".services-card")[0]
+
+
+console.log("service",services)
+
+
+    useGsap.to(services, {
+    opacity:1,
+    y: "-80px",
+    duration :0.4,
+
+    ease: "power4.easeInOut",
+    scrollTrigger:{
+        trigger:".services",
+        start:"start top",
+        markers:true,
+        toggleActions:"play pause reverse reverse"
+    }
+        
+    });
+
+
+    useGsap.to(cards, {
+    opacity:1,
+    duration :0.4,
+
+    ease: "power4.easeInOut",
+    scrollTrigger:{
+        trigger:".services",
+        start:"start top",
+        markers:true,
+        toggleActions:"play pause reverse reverse"
+    }
+        
+    });
+
 
 
 box.forEach(element => {
