@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="card-wrapper flex  flex-col lg:flex-row   mt-6 gap-6 w-full">
+        <div id="last" class="card-wrapper  flex  flex-col lg:flex-row   mt-6 gap-6 w-full">
             <div class="text-card min-h-96 px-8 py-24 w-full lg:w-9/12 ">
                 <h1>Conception et Optimisation de Menus</h1>
                 <p class="mt-4">Attirez et engagez vos clients avec des menus attrayants et optimisés pour les plateformes en ligne. Gestion simplifiée grâce à notre système de gestion de contenu (CMS).</p>
@@ -61,55 +61,7 @@
 
     </div>
 
-    
-    <div class="relative mt-80">
 
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
-        
-    </div>
-        
 
 
 
@@ -141,15 +93,15 @@ console.log("service",services)
 
     useGsap.to(services, {
     opacity:1,
-    y: "-80px",
+    y: "-60px",
     duration :0.4,
 
     ease: "power4.easeInOut",
     scrollTrigger:{
         trigger:".services",
-        start:"start top",
+        start:"start center",
         markers:true,
-        toggleActions:"play pause reverse reverse"
+        toggleActions:"play reverse play reverse"
     }
         
     });
@@ -163,8 +115,8 @@ console.log("service",services)
     scrollTrigger:{
         trigger:".services",
         start:"start top",
-        markers:true,
-        toggleActions:"play pause reverse reverse"
+        markers:false,
+        toggleActions:"play reverse play reverse"
     }
         
     });
@@ -176,9 +128,10 @@ box.forEach(element => {
 
     scrollTrigger:{
         trigger:element,
+        endTrigger:"#last",
         start:"start top",
-        markers:true,
-        end:"+=300px",
+        end:"start end",
+        markers:false,
         pin:true,
         pinSpacing:false,
         toggleActions:"play pause reverse reverse"
@@ -208,12 +161,7 @@ box.forEach(element => {
         font-family: $Inter_B;
     }
     h4{
-        font-size: calc($section_slogan_size + 0.390625vw);
-        font-family: $Inter_B;
-
-        span{
-            font-family: $MrDeHaviland;
-        }
+        @include Section-Heading;
     }
     h6{
         font-family: $Inter_R;

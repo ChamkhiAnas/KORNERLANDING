@@ -1,7 +1,7 @@
 <template>
         <div class="header max-w-screen-2xl flex flex-col flex-wrap items-center justify-center mx-auto px-4 py-8   ">
 
-            <h1  class="text-center sloganText flex flex-row gap-4">Boostez votre <span>Café, Bar ou Restaurant</span>  </h1>
+            <div  class="text-center sloganText flex flex-wrap flex-row gap-4 justify-center">Boostez votre <span>Café, Bar ou Restaurant</span>  </div>
             <h6 class="mt-6 w-3/5 SubSloganText text-center">Attirez de nouveaux clients, fidélisez les anciens et augmentez vos ventes avec un site Web performant et conçu pour votre activité.</h6>
 
 
@@ -92,7 +92,7 @@ onMounted(() => {
         var h1Element = document.querySelector(selector);
         var textContent = h1Element.textContent;
         var words = textContent.split(' ');
-                var firstWord = `<span class="testbabe" style="font-family: Inter-Bold;font-size:4rem;"' >${words[0]}</span>`;
+                var firstWord = `<span class="testbabe" style="font-family: Inter-Bold;calc(font-size:4rem - 0.1 vw);"' >${words[0]}</span>`;
                 var secondword = `<span class="testbabe" style="font-family: Inter-Bold;font-size:4rem;">${words[1]}</span>`;
 
                 var remainingWords = words.slice(2)
@@ -611,7 +611,7 @@ useGsap.to(".video-korner", {
 }
 
 
-h1{
+.sloganText{
     font-family: $Inter_B;
     font-size:4rem;
     color:$text-color-primary;

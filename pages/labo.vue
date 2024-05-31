@@ -28,6 +28,17 @@
         <p>teeeeeeeeest</p>
 
 
+        <svg id="logo" width="132" height="44" viewBox="0 0 132 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="path1" d="M91.6457 0.502869C113.933 0.502869 132 18.5701 132 40.8572H91.6457V0.502869Z" fill="#FFEDE3"/>
+            <path id="path2" d="M44.6914 0.502869H85.2343V40.8572H44.6914V0.502869Z" fill="#FFEDE3"/>
+            <ellipse id="ellipse1" cx="20.1771" cy="23.2257" rx="20.1771" ry="20.2714" fill="#FFEDE3"/>
+            <circle id="circle1" cx="20.3657" cy="23.5086" r="11.6914" fill="#012714"/>
+            <ellipse id="ellipse2" cx="20.1772" cy="23.4144" rx="6.03429" ry="5.94" fill="#FFEDE3"/>
+        </svg>
+     
+
+
+
 
     </div>
 
@@ -41,6 +52,39 @@
 
 
 onMounted(() => {
+
+    // useGsap.to("#rect", {
+    // duration: 5, 
+    // repeat: 12,
+    // repeatDelay: 3,
+    // yoyo: true,
+    // ease: "power1.inOut",
+    // motionPath:{
+    //     path: "#path",
+    //     align: "#path",
+    //     autoRotate: true,
+    //     alignOrigin: [0.5, 0.5]
+    // }
+    // });
+
+    const tl = useGsap.timeline({defaults: {duration: 1, ease: "power1.inOut"}});
+
+    // Draw paths animation
+    tl.from("#path1", {drawSVG: 0, duration: 1.5})
+    .from("#path2", {drawSVG: 0, duration: 1.5}, "-=1.2")
+
+    // Animate ellipses and circles
+    tl.fromTo("#ellipse1", {scale: 0}, {scale: 1, duration: 1.5, ease: "elastic.out(1, 0.3)"}, "-=1")
+    .fromTo("#circle1", {scale: 0}, {scale: 1, duration: 1.5, ease: "elastic.out(1, 0.3)"}, "-=1.2")
+    .fromTo("#ellipse2", {scale: 0}, {scale: 1, duration: 1.5, ease: "elastic.out(1, 0.3)"}, "-=1.2");
+
+    // Rotate and translate elements for additional complexity
+    tl.to("#path1", {rotation: 360, transformOrigin: "center", duration: 2, ease: "back.inOut(1.7)"}, "-=1")
+    .to("#path2", {rotation: -360, transformOrigin: "center", duration: 2, ease: "back.inOut(1.7)"}, "-=2")
+    // .to("#ellipse1", {x: 50, y: -10, duration: 2, ease: "power2.inOut"}, "-=2")
+    // .to("#circle1", {x: 50, y: -10, duration: 2, ease: "power2.inOut"}, "-=2")
+    // .to("#ellipse2", {x: 50, y: -10, duration: 2, ease: "power2.inOut"}, "-=2");
+
 
 
       
@@ -128,6 +172,76 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @use "~/assets/styling.scss";
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+h1 {
+  color: white;
+}
+#rect text {
+  pointer-events: none;
+}
+
+body {
+  background-color: black;
+  color: #999;
+  font-family: "Signika Negative", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+svg {
+  overflow: visible;
+  height: 100%;
+  
+  /* Fix Safari rendering bug */
+  transform: translateZ(0);
+}
+
+
+
+a {
+  color: #88ce02;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+#div {
+  width: 120px;
+  height: 60px;
+  pointer-events: none;
+  background-color: #aa00ee;
+  color: black;
+  text-align: center;
+  line-height: 60px;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  font-size: 32px;
+}
+
+
+
+
+
+.gsap-3-logo {
+    width: 20vw;
+    max-width: 150px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
 
 .test-containter{
     background-color: $text-color-secondary;
