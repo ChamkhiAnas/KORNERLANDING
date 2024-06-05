@@ -100,7 +100,7 @@ console.log("service",services)
     scrollTrigger:{
         trigger:".services",
         start:"start center",
-        markers:true,
+        markers:false,
         toggleActions:"play reverse play reverse"
     }
         

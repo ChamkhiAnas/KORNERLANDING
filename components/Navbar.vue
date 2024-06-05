@@ -97,6 +97,10 @@ onMounted(() => {
 
 
 
+
+
+
+
   const tl = useGsap.timeline({defaults: {duration: 1,ease: "power1.inOut"}, delay: 1.3});
 
   tl.to("#logo", {opacity: 1, duration: 0.2});

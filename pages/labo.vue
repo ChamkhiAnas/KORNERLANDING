@@ -152,7 +152,7 @@ onMounted(() => {
         scrollTrigger:{
             trigger:element,
             start:"top top",
-            markers:true,
+            markers:false,
             end:"+=300px",
             pin:true,
             pinSpacing:false,
